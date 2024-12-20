@@ -1,25 +1,21 @@
 import { useState } from 'react'
-import {
-  createBoard,
-  generateWinningCombinations,
-} from '../utils/ticTacToe.utils'
+import { createBoard, WINING_PATTERNS } from '../utils/ticTacToe.utils'
 
 export const useTicTacToe = (size: number) => {
   const [board, setBoard] = useState(createBoard(size))
   const [isXNext, setIsXNext] = useState(true)
 
-  const winningCombinations = generateWinningCombinations(size)
+  const winningCombinations = WINING_PATTERNS
+  // const winningCombinations = generateWinningCombinations(size)
 
   const checkWinner = () => {
-    for (const combination of winningCombinations) {
-      const [first, ...rest] = combination
-      if (
-        board[first] &&
-        rest.every((index) => board[first] === board[index])
-      ) {
-        return board[first]
+    for (let i = 0; i < winningCombinations.length; i++) {
+      const [a, b, c] = winningCombinations[i]
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        return board[a]
       }
     }
+
     return null
   }
 

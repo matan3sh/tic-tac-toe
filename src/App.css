@@ -1,13 +1,5 @@
-/* Center and style the game container */
 .game {
   margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  font-family: 'Roboto', sans-serif;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: #fefefe;
 }
 
 .status {
@@ -16,8 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 0 10px;
 }
 
 .reset-button {
@@ -25,14 +15,6 @@
   font-size: 14px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.reset-button:hover {
-  background-color: #0056b3;
 }
 
 .board {
@@ -47,22 +29,5 @@
   width: 100px;
   height: 100px;
   font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease-in-out;
-}
-
-.cell:hover {
-  transform: scale(1.05);
-  background-color: #f0f8ff;
-}
-
-.cell:disabled {
-  cursor: not-allowed;
-  color: #aaa;
+  border: none;
 }
